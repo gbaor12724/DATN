@@ -1,0 +1,64 @@
+/* src/ProductGrid.css */
+
+/* Thiết lập kiểu dáng chung cho danh sách sản phẩm */
+ul {
+    list-style-type: none;
+    /* Bỏ dấu đầu dòng */
+    padding: 0;
+    /* Bỏ padding mặc định */
+    margin: 20px;
+    /* Margin bên ngoài danh sách */
+}
+
+/* Kiểu dáng cho mỗi sản phẩm */
+li {
+    border: 1px solid #ccc;
+    /* Đường viền cho sản phẩm */
+    border-radius: 5px;
+    /* Bo góc */
+    padding: 15px;
+    /* Khoảng cách bên trong */
+    margin-bottom: 20px;
+    /* Khoảng cách giữa các sản phẩm */
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+/* Hình ảnh sản phẩm */
+img {
+    max-width: 150px;
+    /* Đặt chiều rộng tối đa cho hình ảnh */
+    margin-right: 20px;
+    /* Khoảng cách bên phải của hình ảnh */
+    border-radius: 5px;
+    /* Bo góc cho hình ảnh */
+}
+
+/* Tiêu đề sản phẩm */
+h2 {
+    margin: 0;
+    /* Bỏ margin mặc định cho tiêu đề */
+    font-size: 1.5em;
+    /* Kích thước chữ cho tiêu đề */
+}
+
+/* Định dạng cho giá gốc */
+p {
+    margin: 5px 0;
+    /* Khoảng cách cho các đoạn văn bản */
+}
+
+/* Định dạng cho giá gốc đã gạch ngang */
+p[style*="text-decoration: line-through"] {
+    color: #888;
+    /* Màu sắc cho giá gốc đã gạch */
+}
+
+/* Định dạng cho giá giảm */
+p[style*="color: red"] {
+    font-weight: bold;
+    /* Làm đậm giá giảm */
+}
+

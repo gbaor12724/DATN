@@ -1,0 +1,26 @@
+.contact-container {
+    max-width: 600px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa trang */
+    padding: 20px; /* Thêm khoảng cách */
+}
+
+h1 {
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Khoảng cách giữa các trường */
+}
+
+label {
+    display: block; /* Mỗi nhãn trên một dòng */
+    margin-bottom: 5px; /* Khoảng cách dưới nhãn */
+}
+
+input,
+textarea {
+    width: 100%; /* Chiều rộng đầy đủ */
+    padding: 10px; /* Padding cho trường nhập */
+    border: 1px solid #ccc; /* Đường viền cho trường nhập */
+    border-radius: 4px; /* Bo góc cho đường viền */
+}

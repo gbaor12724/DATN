@@ -1,0 +1,59 @@
+.san-pham-container {
+    max-width: 1264px;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.bg {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product-item {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Pagination styles */
+.container-fluid {
+    margin-top: 20px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.card {
+    position: relative; /* Đặt vị trí tương đối cho card */
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px; /* Điều chỉnh khoảng cách từ trên */
+    left: 10px; /* Điều chỉnh khoảng cách từ bên trái */
+    font-size: 24px; /* Kích thước icon */
+    z-index: 1; /* Đảm bảo icon nằm trên cùng */
+    cursor: pointer; /* Hiển thị con trỏ chuột như tay khi hover */
+}
