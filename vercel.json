@@ -2,10 +2,8 @@
   "version": 2,
   "rewrites": [
     {
-      "rewrites": [
-        { "source": "/(.*)", "destination": "/index.html" }
-      ]
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-    
   ]
 }
