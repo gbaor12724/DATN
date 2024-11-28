@@ -1,0 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_email_password
+EMAILJS_SERVICE_ID=service_l7qxfjp
+EMAILJS_TEMPLATE_ID=template_6ntqhzr
+EMAILJS_USER_ID=myLC41mHVyDyWo4Sn

@@ -1,0 +1,239 @@
+/* Tổng thể cho container */
+.login-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.w3layoutscontaineragileits {
+    padding: 20px 0;
+}
+
+.w3layoutscontaineragileits h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Các input form */
+.w3layoutscontaineragileits input[type="text"],
+.w3layoutscontaineragileits input[type="email"],
+.w3layoutscontaineragileits input[type="password"] {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.w3layoutscontaineragileits input[type="text"]:focus,
+.w3layoutscontaineragileits input[type="email"]:focus,
+.w3layoutscontaineragileits input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+
+
+/* Nếu vẫn bị ảnh hưởng, bạn có thể thêm các quy tắc khác */
+.w3layoutscontaineragileits input {
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* Bạn cũng có thể thêm định dạng riêng cho label */
+.w3layoutscontaineragileits label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Checkbox và liên kết */
+.agileinfotickwthree {
+    /* margin: 20px 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Định dạng cho checkbox container */
+.login-check {
+    display: flex;
+    align-items: center;
+    /* Căn giữa checkbox và nhãn */
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+/* Định dạng cho checkbox */
+.login-check input[type="checkbox"] {
+    margin: -206px;
+    margin-right: -211px;
+}
+
+/* Định dạng cho nhãn */
+.login-check label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.agileinfotickwthree a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.agileinfotickwthree {
+    margin-left: -5px;
+    /* Kéo qua trái 5px */
+}
+
+.agileinfotickwthree.luumk {
+    margin-left: -20px;
+    /* Kéo qua trái 5px */
+}
+
+
+/* Nút đăng nhập */
+.aitssendbuttonw3ls button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.aitssendbuttonw3ls button:hover {
+    background-color: #0056b3;
+}
+
+.aitssendbuttonw3ls p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.aitssendbuttonw3ls p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.aitssendbuttonw3ls p a:hover {
+    text-decoration: underline;
+}
+
+/* Popup đăng ký */
+.mfp-hide {
+    display: none;
+}
+
+.contact-form1 {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-w3-agileits h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form1 form input {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form1 form input:focus {
+    border-color: #007bff;
+}
+
+.contact-form1 .submit-w3l button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form1 .submit-w3l button:hover {
+    background-color: #218838;
+}
+
+.agileinfotickwthree {
+    display: flex;
+    justify-content: space-between;
+    /* Tách khoảng cách giữa checkbox và link */
+    align-items: center;
+    /* Canh giữa theo chiều dọc */
+    margin: 15px 0;
+}
+
+.agileinfotickwthree li {
+    display: flex;
+    align-items: center;
+    /* Đảm bảo checkbox và chữ trên cùng dòng */
+    flex-shrink: 0;
+    /* Ngăn chữ bị thu nhỏ */
+}
+
+.agileinfotickwthree label {
+    display: inline-block;
+    /* Đảm bảo chữ "Lưu mật khẩu" nằm ngang */
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    width: 166px;
+}
+
+.agileinfotickwthree input[type="checkbox"] {
+    margin: -30px;
+    /* Đảm bảo checkbox không gây lệch hàng */
+}
+
+.agileinfotickwthree a {
+    color: #007bff;
+    /* Màu xanh nổi bật */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.agileinfotickwthree a:hover {
+    text-decoration: underline;
+    /* Hiệu ứng hover */
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

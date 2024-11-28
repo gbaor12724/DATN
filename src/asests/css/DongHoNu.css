@@ -1,0 +1,185 @@
+/* DongHoNu.css */
+
+/* Căn giữa nội dung */
+.canhgiua {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    /* Added margin auto to center the container */
+}
+
+/* Banner section */
+.bg {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Same shadow as the main CSS */
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Hover effect added similar to .product-item hover */
+}
+
+/* Product image */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Buttons container */
+.product-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* General button styling */
+button {
+    background-color: #ff6600; /* Adjusted to match the main CSS */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-family: 'Poppins', sans-serif; /* Consistent font with main CSS */
+}
+
+button:hover {
+    background-color: #ff4d00; /* Darker shade for hover effect */
+    transform: scale(1.05);
+}
+
+/* Show More button */
+.showmore {
+    background-color: transparent;
+    color: #007BFF;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.showmore:hover {
+    color: #0056b3;
+}
+
+/* Input group styling */
+.input-group {
+    margin: 20px 0;
+}
+
+/* Product name and price */
+.product-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 1em;
+    color: #777;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.product-price .product-price-original {
+    text-decoration: line-through;
+    color: black;
+}
+
+.product-price .product-price-discounted {
+    font-weight: bold;
+    color: red;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #007BFF;
+    background-color: white;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.pagination button:focus {
+    outline: none;
+}
+
+.pagination button.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Nút quay lại đầu trang */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+#myBtn:hover {
+    background-color: #ff4d00;
+}
+
+/* Dark mode fixes for DongHoNu */
+body.dark-mode .product-buttons button {
+    background-color: #8b5e3c;
+    color: white;
+}
+
+body.dark-mode .product-buttons button:hover {
+    background-color: #c19a6b;
+}
+
+body.dark-mode #myBtn {
+    background-color: #c19a6b;
+}
+
+body.dark-mode .pagination button {
+    border: 1px solid #f1e0c6;
+    background-color: #5a3d3d;
+    color: #f1e0c6;
+}
+
+body.dark-mode .pagination button:hover {
+    background-color: #c19a6b;
+    color: white;
+}

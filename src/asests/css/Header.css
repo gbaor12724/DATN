@@ -1,0 +1,346 @@
+/* General Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    padding: 5px 20px;
+    border-bottom: 2px solid #ebebeb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-brand img {
+    max-width: 120px;
+    height: auto;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 25px;
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f2a900;
+    border-bottom: 2px solid #f2a900;
+}
+
+.navbar-nav .dropdown-toggle {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .dropdown-menu li {
+    padding: 8px 15px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.navbar-nav .dropdown-menu li a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .dropdown-menu li a:hover {
+    color: #f2a900;
+}
+/* Form tìm kiếm */
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Màu nền đồng nhất với header */
+    padding: 10px 20px;
+    border-radius: 20px; /* Bo góc tròn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    border: 1px solid #ebebeb; /* Viền tinh tế */
+}
+
+/* Input */
+.d-flex input {
+    flex: 1; /* Để input co giãn chiếm hết chiều ngang */
+    padding: 10px 20px; /* Nội dung bên trong */
+    border: none; /* Bỏ viền */
+    outline: none; /* Không viền khi focus */
+    border-radius: 20px; /* Bo tròn góc */
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+    font-size: 14px; /* Cỡ chữ đồng bộ */
+    color: #333; /* Màu chữ */
+    transition: all 0.3s ease; /* Hiệu ứng khi focus */
+}
+
+.d-flex input:focus {
+    background-color: #ffffff; /* Nền trắng khi focus */
+    box-shadow: 0 0 5px rgba(242, 169, 0, 0.5); /* Hiệu ứng sáng khi focus */
+}
+
+/* Nút button */
+.d-flex button {
+    background-color: #f2a900; /* Màu vàng nhấn mạnh */
+    color: white; /* Màu chữ */
+    border: none; /* Bỏ viền */
+    border-radius: 50%; /* Bo tròn thành nút hình tròn */
+    width: 40px;
+    height: 40px; /* Kích thước nút */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Con trỏ chuột */
+    transition: all 0.3s ease; /* Hiệu ứng hover */
+}
+
+.d-flex button:hover {
+    background-color: #e17b00; /* Màu đậm hơn khi hover */
+    transform: scale(1.1); /* Phóng to nhẹ */
+}
+
+/* Icon search */
+.d-flex button i {
+    font-size: 18px; /* Kích thước icon */
+}
+
+/* Icons */
+.navbar-nav .nav-item .fa-phone,
+.navbar-nav .nav-item .fa-user {
+    font-size: 18px;
+    color: #333333;
+}
+
+.navbar-nav .nav-item button,
+.navbar-nav .nav-item .fa-phone:hover,
+.navbar-nav .nav-item .fa-user:hover {
+    color: #f2a900;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cart and Wishlist */
+.navbar-nav .nav-item .btn-outline-danger,
+.navbar-nav .nav-item button {
+    font-size: 14px;
+    color: #007bff;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .btn-outline-danger:hover {
+    color: #f2a900;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .d-flex input {
+        width: 100%;
+    }
+}
+
+/* Màu nền tổng thể */
+body.dark-mode {
+    background-color: #5f5858; /* Nền tối sang trọng */
+    color: #e5e5e5; /* Màu chữ xám nhạt dễ nhìn */
+}
+
+/* Thanh navbar */
+body.dark-mode .navbar {
+    background-color: #252525; /* Nền tối hơn một chút */
+    border-color: #3a3a3a; /* Viền màu tối trung tính */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Tạo chiều sâu */
+}
+
+/* Màu chữ trong navbar */
+body.dark-mode .navbar-nav .nav-link {
+    color: #e5e5e5; /* Màu chữ nhạt để dễ đọc */
+    font-weight: 500; /* Chữ hơi đậm */
+}
+
+/* Hiệu ứng hover trên navbar */
+body.dark-mode .navbar-nav .nav-link:hover {
+    color: #f2c046; /* Màu vàng nhấn mạnh */
+}
+
+/* Nút bấm và các phần tử khác */
+body.dark-mode button,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #252525; /* Nền nút tương đồng với navbar */
+    color: #e5e5e5;
+    border: 1px solid #3a3a3a; /* Viền nút nhẹ nhàng */
+}
+
+body.dark-mode button:hover {
+    background-color: #333333; /* Hiệu ứng hover */
+    color: #f2c046;
+}
+
+/* Đường viền và nền của các khối */
+body.dark-mode .card, 
+body.dark-mode .box, 
+body.dark-mode .dropdown-menu {
+    background-color: #2a2a2a; /* Nền tối sang trọng */
+    border-color: #3a3a3a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+}
+
+/* Các đường kẻ */
+body.dark-mode hr {
+    border-top: 1px solid #3a3a3a;
+}
+
+/* Link trong nội dung */
+body.dark-mode a {
+    color: #f2c046; /* Màu vàng cho link */
+    text-decoration: none; /* Không gạch chân */
+}
+
+body.dark-mode a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background-color: #151515; /* Màu tối nhất cho footer */
+    color: #7a7a7a; /* Chữ xám nhạt hơn */
+}
+
+body.dark-mode .footer a {
+    color: #e5e5e5; /* Màu chữ trong footer */
+}
+
+body.dark-mode .footer a:hover {
+    color: #f2c046;
+}
+/* Cơ bản, phần dành cho chế độ light mode */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+.section {
+    background-color: #f9f9f9; /* Nền sáng */
+    color: #333; /* Màu chữ sáng */
+}
+
+/* Cập nhật cho chế độ dark mode */
+body.dark-mode {
+    background-color: #121212; /* Nền tối */
+    color: #f1f1f1; /* Màu chữ sáng cho nền tối */
+}
+
+body.dark-mode .section {
+    background-color: #333; /* Nền tối cho section */
+    color: #f1f1f1; /* Màu chữ sáng */
+}
+
+body.dark-mode h3 {
+    color: #f1f1f1; /* Màu chữ tiêu đề sáng trong dark mode */
+}
+
+body.dark-mode .product-item {
+    background-color: #444; /* Nền tối cho sản phẩm */
+    border: 1px solid #666; /* Biên tối hơn */
+}
+
+body.dark-mode .product-name {
+    color: #f1f1f1; /* Màu chữ tên sản phẩm sáng */
+}
+
+body.dark-mode .product-price {
+    color: #ff5722; /* Màu giá sản phẩm nổi bật */
+}
+
+body.dark-mode .pagination button {
+    border: 1px solid #f1f1f1;
+    background-color: #444; /* Nền tối cho nút phân trang */
+    color: #f1f1f1; /* Màu chữ sáng */
+}
+
+body.dark-mode .pagination button:hover {
+    background-color: #ff5722; /* Màu nền khi hover */
+    color: white;
+}
+
+body.dark-mode .product-buttons button {
+    background-color: #ff6600; /* Màu nền đẹp cho nút */
+    color: white;
+}
+
+body.dark-mode .product-buttons button:hover {
+    background-color: #ff4d00; /* Màu nền khi hover */
+}
+
+body.dark-mode #myBtn {
+    background-color: #ff5722; /* Nền vàng đậm cho nút quay lại đầu trang */
+}
+
+/* Thêm hiệu ứng cho các icon khi bật dark mode */
+body.dark-mode .iconStyle {
+    color: #f1f1f1; /* Màu sáng cho icon trong dark mode */
+}
+
+body.dark-mode .buttonStyle {
+    color: #f1f1f1; /* Màu chữ sáng cho nút */
+}
+
+/* Dark mode cho video container */
+body.dark-mode .video-container {
+    background-color: #444; /* Nền tối cho video */
+}
+
+body.dark-mode .video-container iframe {
+    border: none;
+}

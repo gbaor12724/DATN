@@ -1,0 +1,449 @@
+/* Căn giữa nội dung */
+.canhgiua {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Tiêu đề trang chính */
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #e9e3e3;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Phần mô tả dưới tiêu đề */
+p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Banner */
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Sản phẩm nổi bật */
+.bg {
+    width: 200px;
+    margin-top: 40px;
+}
+
+.product-item {
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hình ảnh sản phẩm */
+.product-item img {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.product-item img:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Tên và giá sản phẩm */
+.product-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 1em;
+    color: #777;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.product-price span {
+    display: block;
+}
+
+.product-price .product-price-original {
+    text-decoration: line-through;
+    color: black;
+}
+
+.product-price .product-price-discounted {
+    font-weight: bold;
+    color: red;
+}
+
+.product-buttons {
+    text-align: center;
+}
+
+.product-buttons button {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-buttons button:hover {
+    background-color: #e2e6ea;
+}
+
+.product-buttons button .icon {
+    margin-right: 5px;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-item a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Flex Container */
+.col-md-3 {
+    padding: 15px;
+    display: flex;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Tên và giá sản phẩm */
+.product-name {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    margin: 5px 0;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    color: #f44336;
+}
+
+/* Nút thêm vào giỏ và yêu thích */
+.product-buttons button {
+    background-color: #ffb300;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-buttons button:hover {
+    background-color: #ff8f00;
+}
+
+/* Phân trang */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #007BFF;
+    background-color: white;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pagination button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.pagination button:focus {
+    outline: none;
+}
+
+.pagination button.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Nút quay lại đầu trang */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffb300;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+#myBtn:hover {
+    background-color: #ff8f00;
+}
+
+.product-buttons button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-buttons button:hover {
+    background-color: #ff4d00;
+}
+
+.product-buttons button:focus {
+    outline: none;
+}
+
+.product-buttons .icon {
+    margin-right: 8px;
+}
+
+.iconStyle {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.buttonStyle {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Section styling */
+.section {
+    padding: 60px 0;
+    /* Add more padding to space things out */
+    background-color: #f9f9f9;
+    /* Light background for the section */
+    text-align: center;
+}
+
+/* Container to center the content */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Styling for the title */
+.title h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f5e9e9;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 1500px;
+    max-width: 960px;
+    /* Limit the width of the video */
+    margin: 0 auto;
+    /* Center the video */
+    border-radius: 12px;
+    /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Shadow for the video */
+}
+
+/* Styling for the iframe to make the video responsive */
+.video-container iframe {
+    width: 1500px;
+    height: 500px;
+    /* Larger height to make it more prominent */
+    border: none;
+    border-radius: 12px;
+    /* Round the corners */
+}
+
+/* Mobile responsive design */
+@media (max-width: 1500px) {
+    .video-container iframe {
+        height: 300px;
+        /* Reduce the height on smaller screens */
+    }
+
+    .title h3 {
+        font-size: 26px;
+        /* Smaller title on small screens */
+    }
+}
+
+
+/* Cơ bản, phần dành cho chế độ light mode */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+.section {
+    background-color: #f9f9f9;
+    /* Nền sáng */
+    color: #333;
+    /* Màu chữ sáng */
+}
+
+/* Cập nhật cho chế độ dark mode với màu nâu ấm */
+body.dark-mode {
+    background-color: #3e2b2b;
+    /* Nền nâu ấm */
+    color: #f1e0c6;
+    /* Màu chữ sáng, vàng nhạt */
+}
+
+body.dark-mode .section {
+    background-color: #5a3d3d;
+    /* Nền nâu sáng */
+    color: #f1e0c6;
+    /* Màu chữ sáng */
+}
+
+body.dark-mode h3 {
+    color: #f1e0c6;
+    /* Màu chữ tiêu đề sáng */
+}
+
+body.dark-mode .product-item {
+    background-color: #6f4f4f;
+    /* Nền nâu trung bình */
+    border: 1px solid #8b5e3c;
+    /* Biên nâu đậm hơn */
+}
+
+body.dark-mode .product-name {
+    color: #f1e0c6;
+    /* Màu chữ tên sản phẩm sáng */
+}
+
+body.dark-mode .product-price {
+    color: #c19a6b;
+    /* Màu giá sản phẩm màu vàng nâu sáng */
+}
+
+body.dark-mode .pagination button {
+    border: 1px solid #f1e0c6;
+    background-color: #5a3d3d;
+    /* Nền nâu sáng cho nút phân trang */
+    color: #f1e0c6;
+    /* Màu chữ sáng */
+}
+
+body.dark-mode .pagination button:hover {
+    background-color: #c19a6b;
+    /* Màu nền khi hover, vàng nâu */
+    color: white;
+}
+
+body.dark-mode .product-buttons button {
+    background-color: #8b5e3c;
+    /* Màu nền nâu đậm cho nút */
+    color: white;
+}
+
+body.dark-mode .product-buttons button:hover {
+    background-color: #c19a6b;
+    /* Màu nền khi hover */
+}
+
+body.dark-mode #myBtn {
+    background-color: #c19a6b;
+    /* Nền vàng nâu đậm cho nút quay lại đầu trang */
+}
+
+/* Thêm hiệu ứng cho các icon khi bật dark mode */
+body.dark-mode .iconStyle {
+    color: #f1e0c6;
+    /* Màu sáng cho icon trong dark mode */
+}
+
+body.dark-mode .buttonStyle {
+    color: #f1e0c6;
+    /* Màu chữ sáng cho nút */
+}
+
+/* Dark mode cho video container */
+body.dark-mode .video-container {
+    background-color: #6f4f4f;
+    /* Nền nâu trung bình cho video */
+}
+
+body.dark-mode .video-container iframe {
+    border: none;
+}

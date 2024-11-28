@@ -1,0 +1,30 @@
+/* Chế độ tối */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Thay đổi màu navbar khi ở chế độ tối */
+body.dark-mode .navbar {
+    background-color: #333333;
+}
+
+/* Thay đổi màu navbar-link trong chế độ tối */
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+/* Các phần tử khác có thể thay đổi khi chế độ tối được kích hoạt */
+body.dark-mode .dropdown-menu {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Các icon mặt trời và mặt trăng */
+.fas.fa-sun {
+    color: #FFD700;
+}
+
+.fas.fa-moon {
+    color: #A9A9A9;
+}

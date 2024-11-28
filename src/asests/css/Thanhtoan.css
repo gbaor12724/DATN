@@ -1,0 +1,73 @@
+/* Thanhtoan.css */
+
+.thanhtoan-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.thanhtoan-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.thanhtoan-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.thanhtoan-form input[type="text"],
+.thanhtoan-form input[type="email"],
+.thanhtoan-form select,
+.thanhtoan-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.thanhtoan-form textarea {
+    height: 80px;
+}
+
+.payment-options {
+    margin-top: 20px;
+}
+
+.payment-options label {
+    display: block;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.thanhtoan-form .terms {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.thanhtoan-form .terms input {
+    margin-right: 8px;
+}
+
+.thanhtoan-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #d0b68b;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.thanhtoan-form button:hover {
+    background-color: #b9986d;
+}
