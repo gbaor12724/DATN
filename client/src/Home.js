@@ -11,8 +11,7 @@ import bannerImage6 from './images/b100.jpg';
 import TopBrandsCarousel from "./TopBrandCarousel";
 import './asests/css/Home.css';
 import WatchKnowledge from "./WatchKnowledge";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 
 import { FaShoppingCart, FaHeart } from 'react-icons/fa'; // Import các icon cần dùng

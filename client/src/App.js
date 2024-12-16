@@ -6,9 +6,7 @@ import Seiko from './seiko';
 import Omega from './omega.js';
 import Rolex from './rolex.js';
 import { useLocation } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+
 
 import Home from './Home';
 import Header from './Header';

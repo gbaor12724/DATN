@@ -1,10 +1,13 @@
 {
   "dependencies": {
     "multer": "^1.4.5-lts.1",
-    "react-slick": "^0.30.2",
+    "react-scripts": "^5.0.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "scripts": {
+    "build": "react-scripts build"
   }
 }

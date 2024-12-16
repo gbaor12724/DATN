@@ -4,9 +4,8 @@ import { themSP } from './cartSlice';
 import { Link } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from 'react-icons/fa'; // Import icons từ react-icons
 import './asests/css/DongHoNam.css';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+
+
 // Component Pagination đơn giản
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     return (
