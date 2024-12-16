@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './asests/css/CommentSection.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function CommentSection({ productId }) {
     const [comments, setComments] = useState([]);
