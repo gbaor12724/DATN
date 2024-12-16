@@ -99,6 +99,23 @@ function Home() {
         return () => clearInterval(snowInterval);
     }, []);
 
+    // Thêm useEffect cho nút scroll to top vào đây
+    useEffect(() => {
+        // Khi người dùng cuộn xuống 20px từ đầu trang, hiện nút
+        const scrollFunction = () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        };
+
+        window.addEventListener("scroll", scrollFunction);
+
+        // Cleanup
+        return () => window.removeEventListener("scroll", scrollFunction);
+    }, []);
+
     // Lọc sản phẩm nổi bật (Giá <= 8 triệu)
     const filteredProducts = listsp.filter(product => Number(product.Gia) <= 8000000);
 
@@ -277,7 +294,7 @@ function Home() {
 
         <div className="col-md-9 canhgiua">
             <div id="snow"></div>
-            <div className="banner-container">
+            <div className="banner-container" style={{ marginBottom: '0', padding: '0' }}>
                 {banners.map((banner, index) => (
                     <div
                         key={index}
@@ -306,19 +323,18 @@ function Home() {
                     ))}
                 </div>
             </div>
-            <h3 style={{ textAlign: 'center', paddingTop: '50px' }}>ĐỒNG HỒ CHÍNH HÃNG CAO CẤP</h3>
-            <p style={{ textAlign: 'center' }}>
+            <h3 style={{ textAlign: 'center', paddingTop: '0', margin: '0' }}>ĐỒNG HỒ CHÍNH HÃNG CAO CẤP</h3>
+            <p style={{ textAlign: 'center', marginTop: '10px' }}>
                 Chúng tôi cam kết mang lại những giá trị cao nhất & đồng hồ chính hãng cho khách hàng khi đến với RX-Luxury
             </p>
-            <section className="luxury-shopping-section">
+            <div className="luxury-shopping-section">
                 <div className="luxury-shopping-container">
                     <h1>Welcome to Luxury Shopping</h1>
+                    <h2 className="top-brands-title"></h2>
                     <TopBrandsCarousel />
-                    {/* Add other sections like WatchKnowledge here */}
                 </div>
-            </section>
-            <section>
-
+            </div>
+            <div>
                 <div className="container" style={{ maxWidth: '1264px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', paddingTop: '50px' }}>
                         <hr style={{ flex: 1, border: 'none', borderTop: '1px solid black', margin: '0 10px' }} />
@@ -330,17 +346,16 @@ function Home() {
                             {renderProducts(displayedProducts)}
                         </div>
                     </div>
-                    {/* Phân trang */}
                     <Pagination 
                         currentPage={currentPage}
                         totalPages={totalPages}
                         onPageChange={setCurrentPage}
                     />
                 </div>
-            </section>
+            </div>
             <div id="snow"></div>
 
-            <section className="section-1">
+            <div className="section-1">
                 <div className="container" style={{ maxWidth: '1264px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', paddingTop: '50px' }}>
                         <hr style={{ flex: 1, border: 'none', borderTop: '1px solid black', margin: '0 10px' }} />
@@ -352,15 +367,14 @@ function Home() {
                             {renderProducts(displayedProductsNam)}
                         </div>
                     </div>
-                    {/* Phân trang cho Đồng Hồ Nam */}
                     <Pagination 
                         currentPage={currentPageNam}
                         totalPages={totalPagesNam}
                         onPageChange={setCurrentPageNam}
                     />
                 </div>
-            </section>
-            <section className="video-section">
+            </div>
+            <div className="video-section">
                 <div className="container">
                     <div className="video-header">
                         <h3>Video Quảng Cáo Sản Phẩm</h3>
@@ -379,11 +393,11 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
 
 
-            <section className="section-2">
+            <div className="section-2">
                 <div className="container" style={{ maxWidth: '1264px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', paddingTop: '50px' }}>
                         <hr style={{ flex: 1, border: 'none', borderTop: '1px solid black', margin: '0 10px' }} />
@@ -395,21 +409,19 @@ function Home() {
                             {renderProducts(displayedProductsNu)}
                         </div>
                     </div>
-                    {/* Phân trang cho Đồng Hồ Nữ */}
                     <Pagination 
                         currentPage={currentPageNu}
                         totalPages={totalPagesNu}
                         onPageChange={setCurrentPageNu}
                     />
                 </div>
-            </section>
+            </div>
 
-            <section>
+            <div>
                 <div className="home">
-
-                    <WatchKnowledge /> {/* Include the WatchKnowledge component */}
+                    <WatchKnowledge />
                 </div>
-            </section>
+            </div>
             <button onClick={topFunction} id="myBtn" title="Go to top">^</button>
 
         </div>

@@ -91,20 +91,24 @@ const Header = () => {
     return (
         <header>
             <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
-                <div className="container-fluid">
+                <div className="container-fluid d-flex justify-content-start align-items-center">
                     <a className="navbar-brand" href="/">
                         <img
                             src={logo}
                             style={{
-                                marginLeft: '50px',
-                                width: '350px',      // Tăng width
-                                height: 'auto',      // Để height tự động điều chỉnh
+                                marginLeft: '20px',
+                                width: '350px',
+                                height: 'auto',
                                 objectFit: 'contain',
-                                display: 'block'     // Đảm bảo hiển thị đúng
+                                display: 'block'
                             }}
                             alt="Logo"
                         />
                     </a>
+
+                    <div className="search-form-container">
+                        <SearchForm />
+                    </div>
 
                     <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
                         <span className="navbar-toggler-icon"></span>
@@ -113,9 +117,6 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto" style={{ gap: '5px' }}>
                             <li className="nav-item">
-                                <SearchForm />
-                            </li>
-                            <li>
                                 <div className="dropdown">
                                     <a style={{ borderColor: '#EEEEEE', backgroundColor: '#EEEEEE' }}
                                         className="dropdown-toggle" data-toggle="dropdown" href="#/">

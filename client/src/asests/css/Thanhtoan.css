@@ -11,30 +11,29 @@
 
 .thanhtoan-form {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     box-sizing: border-box;
 }
 
 /* Cột thông tin bên trái */
 .thanhtoan-left {
-    flex: 1 1 45%;
-    margin-right: 20px;
+    flex: 1;
+    padding-right: 30px;
+    max-width: 50%;
 }
 
 /* Cột giỏ hàng bên phải */
 .thanhtoan-right {
-    flex: 1 1 45%;
-    max-width: 450px;
-    padding: 20px;
-    border-left: 2px solid #ddd;
-    box-sizing: border-box;
+    flex: 1;
+    padding-left: 30px;
+    max-width: 50%;
+    border-left: 1px solid #ddd;
 }
 
 /* Các trường thông tin khách hàng */
@@ -153,12 +152,14 @@ button[type="submit"]:hover {
 
     .thanhtoan-left,
     .thanhtoan-right {
-        flex: 1 1 100%;
-        margin-right: 0;
+        max-width: 100%;
+        padding: 15px;
     }
 
-    button[type="submit"] {
-        width: auto;
+    .thanhtoan-right {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        margin-top: 20px;
     }
 }
 
@@ -323,4 +324,34 @@ input[type="text"], input[type="email"], select, textarea {
 
 input[type="radio"] {
     margin-right: 5px;
+}
+
+.thanhtoan-right h3 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+/* Thêm style cho phần tiêu đề giỏ hàng */
+.thanhtoan-right h3 {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    white-space: nowrap; /* Ngăn text bị xuống dòng */
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Style cho icon cây thông (nếu có) */
+.thanhtoan-right h3 img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }

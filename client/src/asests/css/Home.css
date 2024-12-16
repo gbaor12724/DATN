@@ -291,18 +291,23 @@ section img {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    background-color: #ffb300;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #A0522D;
     color: white;
-    padding: 10px;
-    border-radius: 50%;
     cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
     font-size: 18px;
-    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
 }
 
 #myBtn:hover {
-    background-color: #ff8f00;
+    background-color: #8B4513;
 }
 
 .product-buttons button {
@@ -472,7 +477,7 @@ section img {
 }
 
 
-/* Cơ bản, phần dành cho chế độ light mode */
+/* Cơ bản, ph��n dành cho chế độ light mode */
 body {
     background-color: #fff;
     color: #333;
@@ -1725,4 +1730,27 @@ h3::after {
 
 .sale-price {
   font-weight: bold;
+}
+
+#myBtn {
+    display: none; /* Mặc định ẩn nút */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #A0522D;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+#myBtn:hover {
+    background-color: #8B4513;
 }

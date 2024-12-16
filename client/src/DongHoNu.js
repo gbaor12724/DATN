@@ -2,22 +2,62 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { themSP } from './cartSlice';
 import { Link } from "react-router-dom";
-import { FaShoppingCart, FaHeart } from 'react-icons/fa'; // Import icons từ react-icons
+import { FaShoppingCart, FaHeart } from 'react-icons/fa';
+import './asests/css/DongHoNu.css';
+
+// Component Pagination đơn giản
+const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+    return (
+        <div className="pagination-container">
+            <button 
+                className={`pagination-button ${currentPage === 1 ? 'disabled' : ''}`}
+                onClick={() => onPageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+            >
+                &lt;
+            </button>
+
+            {[...Array(totalPages)].map((_, index) => (
+                <button
+                    key={index}
+                    className={`pagination-button ${currentPage === index + 1 ? 'active' : ''}`}
+                    onClick={() => onPageChange(index + 1)}
+                >
+                    {index + 1}
+                </button>
+            ))}
+
+            <button
+                className={`pagination-button ${currentPage === totalPages ? 'disabled' : ''}`}
+                onClick={() => onPageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+            >
+                &gt;
+            </button>
+        </div>
+    );
+};
 
 function DongHoNu() {
     const [listsp, setListSP] = useState([]);
-    const [showAll, setShowAll] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const productsPerPage = 12;
     const dispatch = useDispatch();
+
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = listsp.slice(indexOfFirstProduct, indexOfLastProduct);
+    const totalPages = Math.ceil(listsp.length / productsPerPage);
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch("http://localhost:3000/donghonam/sanpham"); // API cho sản phẩm nữ
+                const response = await fetch("http://localhost:3000/donghonam/sanpham");
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }
                 const data = await response.json();
-                const filteredProducts = data.filter(product => product.nam_nu === 'Nữ'); // Lọc sản phẩm cho nữ
+                const filteredProducts = data.filter(product => product.nam_nu === 'Nữ');
                 setListSP(filteredProducts);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -26,8 +66,6 @@ function DongHoNu() {
 
         fetchProducts();
     }, []);
-
-    const displayedProducts = showAll ? listsp : listsp.slice(0, 16);
 
     function truncateText(text, maxLength) {
         if (text.length > maxLength) {
@@ -52,11 +90,9 @@ function DongHoNu() {
         const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         const updatedFavorites = favorites.some(item => item.ma_san_pham === product.ma_san_pham)
             ? favorites
-            : [...favorites, product]; // Nếu sản phẩm đã có trong danh sách yêu thích thì không thêm nữa
+            : [...favorites, product];
         localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
     };
-
-  
 
     return (
         <div className="col-md-9 canhgiua">
@@ -69,7 +105,7 @@ function DongHoNu() {
                     </div>
                     <div className="bg" style={{ width: '1230px' }}>
                         <div className="row">
-                            {displayedProducts.map((product, index) => (
+                            {currentProducts.map((product, index) => (
                                 <div className="col-md-3 col-sm-12" key={index}>
                                     <div className="card product-item">
                                         <Link to={`/chitiet/${product.ma_san_pham}`}>
@@ -101,31 +137,17 @@ function DongHoNu() {
                         </div>
                     </div>
 
-                    <div className="container-fluid">
-                        <div className="row justify-content-md-center">
-                            <div className="col-md-12" style={{ textAlign: 'center' }}>
-                                <div className="input-group">
-                                    <button className="showmore"
-                                        onClick={() => setShowAll(!showAll)}
-                                        style={{
-                                            margin: '0 auto', padding: '10px 20px', color: '#007BFF', background: 'none', border: 'none', borderRadius: '5px', cursor: 'pointer', textDecoration: 'underline', fontSize: '16px', transition: 'color 0.3s, transform 0.2s', display: 'flex', alignItems: 'center',
-                                        }}
-                                        onMouseEnter={(e) => e.currentTarget.style.color = '#0056b3'} onMouseLeave={(e) => e.currentTarget.style.color = '#007BFF'}
-                                        onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'} onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'} >
-                                        {showAll ? 'Ẩn bớt' : 'Hiển Thị Thêm'}
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style={{ marginLeft: '5px' }}>
-                                            <path fill="currentColor" d="M11.5 8H1v1h10.5l-3.5 3.5 1.5 1.5L15 8l-5.5-5.5-1.5 1.5z" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Pagination 
+                        currentPage={currentPage}
+                        totalPages={totalPages}
+                        onPageChange={setCurrentPage}
+                    />
                 </div>
             </section>
         </div>
     );
 }
+
 const buttonStyle = {
     padding: '8px 16px',
     margin: '5px',
@@ -140,4 +162,34 @@ const buttonStyle = {
 const iconStyle = {
     marginRight: '8px',
 };
+
+const paginationStyles = {
+    '.pagination-container': {
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '5px',
+        marginTop: '20px',
+    },
+    '.pagination-button': {
+        padding: '8px 12px',
+        border: '1px solid #ddd',
+        background: 'white',
+        cursor: 'pointer',
+        borderRadius: '4px',
+    },
+    '.pagination-button.active': {
+        background: '#A0522D',
+        color: 'white',
+        border: '1px solid #A0522D',
+    },
+    '.pagination-button:hover': {
+        background: '#A0522D',
+        color: 'white',
+    },
+    '.pagination-button:disabled': {
+        background: '#eee',
+        cursor: 'not-allowed',
+    },
+};
+
 export default DongHoNu;
