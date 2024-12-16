@@ -1,6 +1,7 @@
 import React from "react";
-
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./asests/css/TopBrandsCarousel.css"; // Adjust path as needed
 
 const TopBrandsCarousel = () => {
